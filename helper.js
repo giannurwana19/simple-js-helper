@@ -7,7 +7,12 @@
  * @param {string} thousands_sep (simbol pemisah ribuan)
  * @returns {string}
  */
-function number_format(number, decimals, dec_point, thousands_sep) {
+function number_format(
+  number,
+  decimals = 0,
+  dec_point = '.',
+  thousands_sep = '.'
+) {
   // Strip all characters but numerical ones.
   number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
   var n = !isFinite(+number) ? 0 : +number,
