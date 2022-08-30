@@ -10,10 +10,9 @@
 function number_format(
   number,
   decimals = 0,
-  dec_point = '.',
+  dec_point = ',',
   thousands_sep = '.'
 ) {
-  // Strip all characters but numerical ones.
   number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
   var n = !isFinite(+number) ? 0 : +number,
     prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
@@ -24,7 +23,7 @@ function number_format(
       var k = Math.pow(10, prec);
       return '' + Math.round(n * k) / k;
     };
-  // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+
   s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
   if (s[0].length > 3) {
     s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
@@ -37,7 +36,7 @@ function number_format(
 }
 
 // example:
-// console.log(number_format('950000.78', '2', ',', '.'));
+// console.log(number_format('950000.78'));
 
 /**
  * function untuk membuat format tanggal indonesia
