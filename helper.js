@@ -224,3 +224,5 @@ function angkaTerbilang(number = 0, settings = { decimal: '.' }) {
       .replace(/(?<= )[^\s]|^./g, a => a.toUpperCase());
   }
 }
+
+// console.log(angkaTerbilang(2150880));
