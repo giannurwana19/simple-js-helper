@@ -235,38 +235,38 @@ function date_format(dateVal, formatVal) {
     'Feb',
     'Mar',
     'Apr',
-    'May',
+    'Mei',
     'Jun',
     'Jul',
-    'Aug',
+    'Agu',
     'Sep',
-    'Oct',
+    'Okt',
     'Nov',
-    'Dec',
+    'Des',
   ];
   Date.longMonths = [
-    'January',
-    'February',
-    'March',
+    'Januari',
+    'Februari',
+    'Maret',
     'April',
-    'May',
-    'June',
-    'July',
-    'August',
+    'Mei',
+    'Juni',
+    'Juli',
+    'Agustus',
     'September',
-    'October',
+    'Oktober',
     'November',
-    'December',
+    'Desember',
   ];
-  Date.shortDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  Date.shortDays = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'];
   Date.longDays = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
+    'Minggu',
+    'Senin',
+    'Selasa',
+    'Rabu',
+    'Kamis',
+    'Jumat',
+    'Sabtu',
   ];
   // Defining patterns
   var replaceChars = {
@@ -467,4 +467,4 @@ function date_format(dateVal, formatVal) {
 }
 
 // example:
-// console.log(date_format(new Date('2022-09-07'), 'd-m-Y'));
+// console.log(date_format(new Date('2022-05-07'), 'd F Y'));
