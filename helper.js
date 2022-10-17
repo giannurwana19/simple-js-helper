@@ -228,6 +228,12 @@ function angkaTerbilang(number = 0, settings = { decimal: '.' }) {
 // example
 // console.log(angkaTerbilang(2150880));
 
+/**
+ * 
+ * @param {Date} dateVal 
+ * @param {String} formatVal 
+ * @returns 
+ */  
 function date_format(dateVal, formatVal) {
   // Defining locale
   Date.shortMonths = [
