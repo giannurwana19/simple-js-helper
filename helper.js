@@ -467,4 +467,4 @@ function date_format(dateVal, formatVal) {
 }
 
 // example:
-console.log(date_format(new Date('2022-09-07'), 'd-m-Y'));
+// console.log(date_format(new Date('2022-09-07'), 'd-m-Y'));
