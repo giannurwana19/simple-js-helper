@@ -228,7 +228,7 @@ function angkaTerbilang(number = 0, settings = { decimal: '.' }) {
 // example
 // console.log(angkaTerbilang(2150880));
 
-(function () {
+function date_format(dateVal, formatVal) {
   // Defining locale
   Date.shortMonths = [
     'Jan',
@@ -460,26 +460,11 @@ function angkaTerbilang(number = 0, settings = { decimal: '.' }) {
     },
   };
   // Simulates PHP's date function
-  Date.prototype.format = function (format) {
-    var date = this;
-    return format.replace(/(\\?)(.)/g, function (_, esc, chr) {
-      return esc === '' && replaceChars[chr]
-        ? replaceChars[chr].call(date)
-        : chr;
-    });
-  };
-}.call(this));
-
-/**
- *
- * @param {Date} dateVal
- * @param {String} formatVal
- * @returns
- */
-function date_format(dateVal, formatVal) {
-  return dateVal.format(formatVal);
+  var date = new Date(dateVal);
+  return formatVal.replace(/(\\?)(.)/g, function (_, esc, chr) {
+    return esc === '' && replaceChars[chr] ? replaceChars[chr].call(date) : chr;
+  });
 }
 
 // example:
-// console.log(new Date('2022-01-09').format('d-m-Y'));
-// console.log(date_format(new Date(), 'd-m-Y'));
+console.log(date_format(new Date('2022-09-07'), 'd-m-Y'));
