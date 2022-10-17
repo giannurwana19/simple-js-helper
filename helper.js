@@ -7,7 +7,7 @@
  * @param {string} thousands_sep (simbol pemisah ribuan)
  * @returns {string}
  */
-function number_format(
+function numberFormat(
   number,
   decimals = 0,
   dec_point = ',',
@@ -36,7 +36,7 @@ function number_format(
 }
 
 // example:
-// console.log(number_format('950000.78'));
+// console.log(numberFormat('950000.78', 2));
 
 /**
  * function untuk membuat format tanggal indonesia
@@ -44,7 +44,7 @@ function number_format(
  * @param {string|number} date
  * @returns {string} date
  */
-function format_tanggal(date) {
+function formatTanggal(date) {
   return new Date(date).toLocaleString('id-ID', {
     // weekday: 'long', // long, short, narrow
     day: 'numeric', // numeric, 2-digit
@@ -57,7 +57,7 @@ function format_tanggal(date) {
 }
 
 // example:
-// console.log(format_tanggal('2022-07-14'));
+// console.log(formatTanggal('2022-07-14'));
 
 /**
  *
@@ -234,7 +234,7 @@ function angkaTerbilang(number = 0, settings = { decimal: '.' }) {
  * @param {String} formatVal 
  * @returns 
  */  
-function date_format(dateVal, formatVal) {
+function dateFormat(dateVal, formatVal) {
   // Defining locale
   Date.shortMonths = [
     'Jan',
@@ -473,4 +473,4 @@ function date_format(dateVal, formatVal) {
 }
 
 // example:
-// console.log(date_format(new Date('2022-05-07'), 'd F Y'));
+// console.log(dateFormat(new Date('2022-05-07'), 'd F Y'));
